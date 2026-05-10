@@ -1,0 +1,19 @@
+name: GitHub Readme Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天午夜自動執行一次
+  workflow_dispatch: # 允許你手動按按鈕執行
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Stats
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          output: generated/stats.svg # 圖片儲存路徑
+          username: 你的GitHub帳號
+          show_icons: true
+          count_private: true
