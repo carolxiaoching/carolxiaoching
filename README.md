@@ -41,6 +41,5 @@
 ## 📊 GitHub 統計
 
 
-
-![carolxiaoching's github stats](https://github-readme-stats.vercel.app/api?username=carolxiaoching&hide_border=true&theme=buefy)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=carolxiaoching&layout=compact&hide_border=true&theme=buefy)
+![carolxiaoching's github stats](https://github-stats-extended.vercel.app/api?username=carolxiaoching&hide_border=true&theme=buefy)
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=carolxiaoching&layout=compact&hide_border=true&theme=buefy)
