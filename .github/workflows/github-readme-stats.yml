@@ -9,11 +9,23 @@ jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Generate Stats
-        uses: anuraghazra/github-readme-stats@master
+        # 注意這裡：官方目前推薦使用最新的 v2 標籤或特定分支
+        uses: anuraghazra/github-readme-stats@v2
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           output: generated/stats.svg
           username: carolxiaoching
           show_icons: true
           count_private: true
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git add generated/stats.svg
+          git commit -m "Update GitHub Stats" || exit 0
+          git push
